@@ -70,10 +70,13 @@ pipeline{
 						
 						
 						
-
-						bat 'git checkout -b master'
+						bat 'git branch -d origin/master'
+						bat 'git checkout -b origin/master'
+						bat 'git merge origin/release'
+						bat 'git push origin master'
+						bat 'git branch -D release'
 						
-						bat 'git merge release'
+						
 						
 
 
