@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+
+	<head lang="en">
+		<title>{{Projet}}</title>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+		<script type=text/javascript src="{{url_for('static', filename='jquery.js') }}"></script>
+	</head>
+	
+
+	
+	<!--Corps du document-->
+	<body>
+		<script type=text/javascript>
+			$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+		</script>
+		
+		
+		<div class="menu ordi">
+			<p><h2 style="padding-top:20px;">Liens utiles</h2></p>
+			<p><a class="tablink" href="https://github.com/theomatas/ST2DEN-II"><B>Github</B></a></p>
+			<p><a class="tablink" href="https://flask.palletsprojects.com/en/1.1.x/"><B>Flask</B></a></p>
+			<p><a class="tablink" href="https://trello.com/b/3sNRaW38/data-eng-project-2"><B>Trello</B></a></p>
+			<p><h2 style="padding-top:20px;">Publicité</h2></p>
+			<p><a class="tablink" href="https://www.youtube.com/watch?v=-WoRHMbWZz4"><img src="{{ url_for('static', filename='cine.png') }}" width="50px" height="50px" style="filter:invert(1);"></a></p>			
+
+			<p><a class="tablink" href="https://cptrendu.herokuapp.com/">
+				<img style="height:17px;height:17px;filter:invert(1);" src="{{ url_for('static', filename='link.png') }}">
+				<B>PDF</B>
+			</a></p>
+		</div>
+		
+		<div class="bureau">
+			<header>
+				<img src="{{ url_for('static', filename='logo.svg') }}" width="178px" height="108px">
+				<h1>{{Projet}}</h1>
+				<p><I>EFREI 2020 - 2021</I></p>
+			</header>
+			<div class="option option2">
+				<p><textarea type=text  name=a placeholder="Insert yout text..."></textarea>
+				<p><a href=# id=sentiments class="validation">Tweet similarity</a>
+				<p id=result> </p>
+			</div>
+			<div class="option">
+				<p><h2 id="temps"></h2></p>
+				<p class="description"><I>Exemple d'utilisation de jQuery</I></p>
+			</div>
+			<div class="option">
+				<p><h1 id="RAM"></h1></p>
+				<p class="description"><I>Mémoire utilisée</I></p>
+			</div>
+			<div class="option">
+				<p><img class="logo" src="{{ url_for('static', filename='python_.png') }}"></p>
+				<p class="description"><I>Python was used to make the testing</I></p>
+			</div>
+			<div class="option">
+				<p><img class="logo" src="{{ url_for('static', filename='flask.png') }}"></p>
+				<p class="description"><I>Flask is the framework used to run the website</I></p>
+			</div>
+			<div class="option">
+				<p><img class="logo" onclick="myFunction5()" src="{{ url_for('static', filename='jenkins.png') }}"></p>
+				<div id="myModal" class="modal" style="display:none;">
+					<div class="modal-content">
+						<span class="close" style="width:5%;padding-left:95%;" onclick="myFunction5()">&times;</span>
+						<div onclick="myFunction5()" class="ima"><img src="{{ url_for('static', filename='deploy_explained.svg') }}"></div>
+					</div>
+				</div>
+				<p class="description"><I>Jenkins was used to auomate the deploy</I></p>
+			</div>
+			<div class="option">
+				<p><img class="logo" src="{{ url_for('static', filename='jquery.png') }}"></p>
+				<p class="description"><I>jQuery is a cool framework to update HTML</I></p>
+			</div>
+			<footer>
+				<p>{{Projet}} V{{Version}}</p>
+			</footer>
+		</div>
+		<div class="menu tel">
+			<p><h2 style="padding-top:20px;">Liens utiles</h2></p>
+			<p><a class="tablink" href="https://github.com/theomatas/ST2DEN-II"><B>Github</B></a></p>
+			<p><a class="tablink" href="https://flask.palletsprojects.com/en/1.1.x/"><B>Flask</B></a></p>
+			<p><a class="tablink" href="https://trello.com/b/3sNRaW38/data-eng-project-2"><B>Trello</B></a></p>
+			
+			<p><h2 style="padding-top:20px;">Publicité</h2></p>
+			<p><a class="tablink" href="https://www.youtube.com/watch?v=-WoRHMbWZz4"><img src="{{ url_for('static', filename='cine.png') }}" width="50px" height="50px" style="filter:invert(1);"></a></p>			
+
+			<p><a class="tablink" href="https://cptrendu.herokuapp.com/">
+				<img style="height:17px;height:17px;filter:invert(1);" src="{{ url_for('static', filename='link.png') }}">
+				<B>PDF</B>
+			</a></p>
+		</div>
+		<!--Pied de page-->
+		
+		<script src="{{url_for('static', filename='main.js') }}"></script>
+	</body>
+</html>

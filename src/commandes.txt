@@ -1,0 +1,5 @@
+docker build -t data-eng:latest .
+docker run --name PROJET -d -p 5000:5000 data-eng
+docker pause PROJET
+docker container rm --force PROJET
+docker image rm --force data-eng

@@ -1,0 +1,28 @@
+__CREAT BRANCH__
+
+git branch test
+
+__CHANGE BRANCH__
+
+git checkout test || git checkout master
+
+__SEE BRANCH__
+
+git branch
+
+__FORCE PULL__
+
+git reset --hard HEAD
+git pull
+
+__ADD FILE__
+
+git add test.py
+
+__COMMIT FILE__
+
+git commit -m "[TAGS] message"
+
+__FIRST PUSH AFTER CREAT BRANCH__
+
+git push --set-upstream origin test
