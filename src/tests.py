@@ -10,21 +10,21 @@ import time as tempo
 
 def test1():
     dictToSend = {'question':'what is the answer?'}
-    res = requests.post('http://127.0.0.1:5000/RAM', json=dictToSend)
+    res = requests.post('http://localhost:5000/RAM', json=dictToSend)
     print('response from server:',res.text)
     print(res)
 
 
 def test2():
     dictToSend = {'question':'what is the answer?'}
-    res = requests.post('http://127.0.0.1:5000/horloge', json=dictToSend)
+    res = requests.post('http://localhost:5000/horloge', json=dictToSend)
     print('response from server:',res.text)
     print(res)
     
     
 def test3():
     dictToSend = {'question':'what is the answer?'}
-    res = requests.post('http://127.0.0.1:5000/sfggd/', json=dictToSend)
+    res = requests.post('http://localhost:5000/sfggd/', json=dictToSend)
     print ('response from server:',res.text)
     print(res)
 
@@ -37,13 +37,13 @@ def test4():
 
 def test5():
     dictToSend = {'phrase':'wall'}
-    res = requests.post('http://127.0.0.1:5000/sentimements', json=dictToSend)
+    res = requests.post('http://localhost:5000/sentimements', json=dictToSend)
     print('response from server:',res.text)
     print(res)
     
 def test6():
     dictToSend = {'phrase':'wall'}
-    res = requests.post('http://127.0.0.1:5000/SIM', json=dictToSend)
+    res = requests.post('http://localhost:5000/SIM', json=dictToSend)
     print('response from server:',res.text)
     print(res)
 
