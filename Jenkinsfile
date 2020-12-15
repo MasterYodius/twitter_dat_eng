@@ -6,7 +6,8 @@ pipeline{
 				script{
 					if(env.BRANCH_NAME != 'master'){
 						echo 'Building docker image'
-						bat 'docker build -t data-eng:latest .'
+						
+						bat 'docker build -t data-eng:latest . -f ./src/Dockerfile'
 					}
 				}	
 			}
@@ -16,6 +17,7 @@ pipeline{
 				script{
 					if(env.BRANCH_NAME != 'master'){
 						echo ('Run the app')
+						
 						bat 'docker run --name PROJET -d -p 5000:5000 data-eng'
 					}
 				}	
