@@ -76,9 +76,9 @@ def deploiement(*tests):
             raise Exception("False")
     return True
 
-t0=tempo.time()
-list(map(lambda x : test3(),list(range(1000))))
-print(tempo.time()-t0)
+#t0=tempo.time()
+#list(map(lambda x : test3(),list(range(1000))))
+#print(tempo.time()-t0)
 t0=tempo.time()
 list(map(lambda x : test1(),list(range(1000))))
 print(tempo.time()-t0)
