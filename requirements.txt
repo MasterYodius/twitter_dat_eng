@@ -1,0 +1,7 @@
+flask
+gunicorn
+psutil
+python-dotenv
+pandas
+gensim
+nltk
