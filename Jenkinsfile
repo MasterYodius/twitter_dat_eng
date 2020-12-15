@@ -7,7 +7,7 @@ pipeline{
 					if(env.BRANCH_NAME != 'master'){
 						echo 'Building docker image'
 						
-						bat 'docker build -t data-eng:latest ./src -f ./src/Dockerfile'
+						bat 'docker build -t data-eng:latest . -f ./src/Dockerfile'
 					}
 				}	
 			}
@@ -29,7 +29,7 @@ pipeline{
 				script{
 					if(env.BRANCH_NAME == 'features'){
 						
-						bat 'C:/Users/alex-/AppData/Local/Programs/Python/Python37/python.exe tests.py'
+						bat 'C:\Users\minim\AppData\Local\Programs\Python\Python37\python.exe tests.py'
 						
 					}
 				}	
