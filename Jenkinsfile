@@ -29,7 +29,7 @@ pipeline{
 				script{
 					if(env.BRANCH_NAME == 'features'){
 						
-						bat 'src/tests.exe'
+						bat './src/tests.exe'
 						
 					}
 				}	
