@@ -24,7 +24,7 @@ def test2():
     
 def test3():
     dictToSend = {'question':'what is the answer?'}
-    res = requests.post('http://127.0.0.1:5000/sfggd', json=dictToSend)
+    res = requests.post('http://127.0.0.1:5000/sfggd/', json=dictToSend)
     print ('response from server:',res.text)
     print(res)
 
